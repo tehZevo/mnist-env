@@ -33,7 +33,7 @@ class MnistEnv(gym.Env):
 
     self.steps += 1
 
-    if self.steps > self.max_episode_steps:
+    if self.steps >= self.max_episode_steps:
       done = True
 
     return obs, reward, done, {}
