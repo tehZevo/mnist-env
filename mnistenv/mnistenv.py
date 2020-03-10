@@ -24,7 +24,7 @@ class MnistEnv(gym.Env):
     #if blackout, then set to zeros, because first obs comes from reset
     obs = np.zeros_like(obs) if self.blackout else self.x
 
-    reward = -1
+    reward = 0
     done = False
 
     if action == self.y:
